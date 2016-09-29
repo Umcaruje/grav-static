@@ -9,10 +9,10 @@
     <meta name="description" content="Grav is an easy to use, yet powerful, open source flat-file CMS" />
         <title>Vesti | Fondacija Dušan Pavlović</title>
         <link rel="icon" type="image/png" href="vesti.html" />
-                                                        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Titillium+Web&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+                                            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Raleway:400,500|Titillium+Web&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
                 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
-<link href="user/themes/bootstrap/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
 <link href="user/themes/custom/css-compiled/theme.css" type="text/css" rel="stylesheet" />
 <link href="user/themes/custom/css/style.min.css" type="text/css" rel="stylesheet" />
 <link href="user/plugins/markdown-notices/assets/notices.css" type="text/css" rel="stylesheet" />
@@ -60,7 +60,8 @@
                         </li>
                                                                                                     <li class="active"><a href="vesti.html">VESTI</a></li>
                                                                                                     <li class=""><a href="kontakt.html">KONTAKT</a></li>
-                                                    
+                                                                                    <li id="doniraj"><a href="http://localhost/grav-admin/doniraj">DONIRAJ</a></li>
+                
                             </ul>
         </div>
     </div>
@@ -81,6 +82,27 @@
                 
     <div class="list-blog-header">
 
+                    <h3><a href="vesti/stranica.html">Stranica</a></h3>
+        
+        <span class="list-blog-date">
+            <i class="fa fa-calendar"></i> <span>August 24, 2016, 11:59 am</span>
+        </span>
+                                                                                                
+                        </div>
+
+    <div class="list-blog-padding">
+
+            <p><p>ggzgigizgizgizgizgzigziigzigz<img src="http://uhih" alt=""><a href="http://hjhj"></a></p></p>
+        <p><a href="vesti/stranica.html">Continue Reading...</a></p>
+    
+    
+    </div>
+</div>
+                                            <div class="list-item">
+
+                
+    <div class="list-blog-header">
+
                     <h3><a href="vesti/znamo-ko-si-ti.html">znamo ko si ti</a></h3>
         
         <span class="list-blog-date">
@@ -91,8 +113,7 @@
 
     <div class="list-blog-padding">
 
-                        <p><p>HAUHAUIHA</p>
-<p>AAUAUOHD
+            <p><p>HAUHAUIHA</p><p>AAUAUOHD
 AUHD
 ADUHDOĐAD
 OUAdh
@@ -100,7 +121,7 @@ AODUhda
 ADOUHDA
 OUH
 DAOUAHOAD</p></p>
-                <p><a href="vesti/znamo-ko-si-ti.html">Continue Reading...</a></p>
+        <p><a href="vesti/znamo-ko-si-ti.html">Continue Reading...</a></p>
     
     
     </div>
@@ -120,7 +141,7 @@ DAOUAHOAD</p></p>
 
     <div class="list-blog-padding">
 
-            <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien odio, tincidunt id congue vel, cursus eget tortor. Pellentesque at nibh tristique, vestibulum erat in, efficitur elit. Etiam sed turpis justo. Mauris metus arcu, scelerisque et nulla non, finibus condimentum lectus. Morbi porttitor…</p></p>
+            <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien odio, tincidunt id congue vel, cursus eget tortor. Pellentesque at nibh tristique, vestibulum erat in, efficitur elit. Etiam sed turpis justo. Mauris metus arcu, scelerisque et nulla non, finibus condimentum lectus. Morbi porttitor...</p></p>
         <p><a href="vesti/post2.html">Continue Reading...</a></p>
     
     
@@ -141,7 +162,7 @@ DAOUAHOAD</p></p>
 
     <div class="list-blog-padding">
 
-            <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien odio, tincidunt id congue vel, cursus eget tortor. Pellentesque at nibh tristique, vestibulum erat in, efficitur elit. Etiam sed turpis justo. Mauris metus arcu, scelerisque et nulla non, finibus condimentum lectus. Morbi porttitor…</p></p>
+            <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien odio, tincidunt id congue vel, cursus eget tortor. Pellentesque at nibh tristique, vestibulum erat in, efficitur elit. Etiam sed turpis justo. Mauris metus arcu, scelerisque et nulla non, finibus condimentum lectus. Morbi porttitor...</p></p>
         <p><a href="vesti/post1.html">Continue Reading...</a></p>
     
     
@@ -158,16 +179,15 @@ DAOUAHOAD</p></p>
     <input class="search-input" type="text" placeholder="Search..." value="" data-search-input="/grav-admin/search/query" />
         <script>
     jQuery(document).ready(function($){
-        var input = $('[data-search-input]');
-
-        input.on('keypress', function(event) {
+        $('.search-input').on('keypress', function(event) {
+            var input = $(event.currentTarget);
             if (event.which == 13 && input.val().length >= 3) {
                 event.preventDefault();
                 window.location.href = input.data('search-input') + ':' + input.val();
             }
         });
-
         $('.search-submit').on('click', function(event) {
+            var input = $(event.currentTarget).prev('.search-input');
             event.preventDefault();
             window.location.href = input.data('search-input') + ':' + input.val();
         });
@@ -185,18 +205,26 @@ DAOUAHOAD</p></p>
 	                	
         <div class="footer">
             <div class="container">
-                <p class="text-muted">Bootstrap Theme for <a href="http://getgrav.org">Grav</a></p>
+                <p class="text-muted">Sajt objavljen pod <a href="vesti.html#">CC BY NC licencom</a>. Pogledajte kod na <a href="vesti.html#">Github-u</a>. Sajt napravio <a href="https://umcaruje.github.io">Umcaruje.</a>
+                <span class="fa-stack pull-right">
+                  <i class="fa fa-square fa-stack-2x fa-inverse"></i>
+                  <i class="fa fa-facebook fa-stack-1x"></i>
+                </span>
+                <span class="fa-stack pull-right">
+                  <i class="fa fa-square fa-stack-2x fa-inverse"></i>
+                  <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+                </p>
             </div>
         </div>
-        
-                                                                    
+
+                                                        
             
                 <script src="system/assets/jquery/jquery-2.x.min.js" type="text/javascript" ></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" type="text/javascript" ></script>
 <script src="user/themes/bootstrap/js/modernizr.custom.71422.js" type="text/javascript" ></script>
-<script src="user/themes/custom/js/collapseNavbar.js" type="text/javascript" ></script>
+<script src="user/themes/custom/js/hax.js" type="text/javascript" ></script>
 <script src="user/themes/custom/js/smartNavbar.js" type="text/javascript" ></script>
-<script src="user/themes/custom/js/jquery.sticky-kit.min.js" type="text/javascript" ></script>
 <script src="user/plugins/featherlight/js/featherlight.min.js" type="text/javascript" ></script>
 
 <script>
@@ -212,10 +240,7 @@ $(document).ready(function(){
 
 </script>
 
-                  <script>
-            $(".sticky").stick_in_parent();
-          </script>
-            </body>
+                    </body>
 </html>
 
 
